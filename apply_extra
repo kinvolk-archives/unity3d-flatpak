@@ -1,0 +1,4 @@
+#!/bin/sh
+ar x unity-editor-5.1.0f3+2015082501_amd64.deb
+tar -xzvf data.tar.gz 
+mv opt/* .
