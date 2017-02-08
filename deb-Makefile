@@ -1,0 +1,8 @@
+all:
+	true
+
+install:
+	ar x *.deb
+	tar xvf data.tar.*
+	rm *.deb data.tar.*
+	mv usr/lib/x86_64-linux-gnu/* /app/lib

@@ -11,6 +11,61 @@
      ],
     "modules": [
         {
+          "name": "libglu",
+          "sources": [
+            {
+              "type": "archive",
+              "url": "http://archive.ubuntu.com/ubuntu/pool/main/libg/libglu/libglu_9.0.0.orig.tar.gz",
+              "sha256": "4387476a1933f36fec1531178ea204057bbeb04cc2d8396c9ea32720a1f7e264"
+            }
+          ]
+        },
+        {
+          "name": "libidl",
+          "sources": [
+            {
+              "type": "archive",
+              "url": "http://archive.ubuntu.com/ubuntu/pool/main/libi/libidl/libidl_0.8.14.orig.tar.gz",
+              "sha256": "bca99570f1ab453e11ae627b209561019cde5aaa98f71f43cc6da048d3bc7e72"
+            }
+          ]
+        },
+        {
+          "name": "libasound2",
+          "no-autogen": true,
+          "sources": [
+            {
+              "type": "file",
+              "url": "http://de.archive.ubuntu.com/ubuntu/pool/main/a/alsa-lib/libasound2_1.0.27.2-3ubuntu7_amd64.deb", 
+              "sha256": "04dbcbb653c059a0a605f8eac645f2a679ad8e63bd0b1fd290af404bf61503ff",
+              "dest-filename": "libasound2.deb"
+            },
+            {
+              "type": "file",
+              "path": "deb-Makefile",
+              "dest-filename": "Makefile"
+            }
+          ]
+        },
+        {
+          "name": "libgconf",
+          "no-autogen": true,
+          "sources": [
+            {
+              "type": "file",
+              "url": "http://de.archive.ubuntu.com/ubuntu/pool/main/g/gconf/libgconf-2-4_3.2.5-0ubuntu2_amd64.deb", 
+              "sha256": "6d2f4006dc545241511f8438b5468971077c667bdcf0545dce32bbf504baeeb8",
+              "dest-filename": "libgconf.deb"
+            },
+            {
+              "type": "file",
+              "path": "deb-Makefile",
+              "dest-filename": "Makefile"
+            }
+          ]
+        },
+        
+        {
             "name": "unity",
             "no-autogen": true,
             "sources": [
