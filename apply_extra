@@ -4,5 +4,7 @@ rm -rf unity-editor-5.1.0f3+2015082501_amd64.deb
 tar -xzvf data.tar.gz 
 rm -rf debian-binary data.tar.gz control.tar.gz
 mv opt/* .
+rm -rf opt/
 mkdir -p export/share/icons/hicolor/256x256/apps
 cp usr/share/icons/hicolor/256x256/apps/unity-editor-icon.png export/share/icons/hicolor/256x256/apps/com.unity.Personal.png
+

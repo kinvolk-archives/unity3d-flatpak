@@ -5,6 +5,9 @@
     "sdk": "org.gnome.Sdk",
     "command": "unity",
      "finish-args": [
+        "--share=ipc", 
+        "--socket=x11",
+        "--socket=wayland",
         "--filesystem=host",
         "--share=network",
         "--extra-data=unity-editor-5.1.0f3+2015082501_amd64.deb:5cbf4f596896aad66562d4bafeb5067c36a8d2b8b455a60c815a7a80e7942962:997410774::http://download.unity3d.com/download_unity/unity-editor-5.1.0f3+2015082501_amd64.deb"
