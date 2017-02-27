@@ -6,3 +6,5 @@ install:
 	mkdir -p /app/bin
 	install apply_extra /app/bin
 	install unity.sh /app/bin/unity
+	mkdir -p /app/misc/
+	install unity-nosuid.c /app/misc/unity-nosuid.c

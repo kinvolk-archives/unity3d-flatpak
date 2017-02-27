@@ -1,4 +1,6 @@
 #!/bin/sh
+set -e
+
 ar x unity-editor-5.1.0f3+2015082501_amd64.deb
 rm -rf unity-editor-5.1.0f3+2015082501_amd64.deb
 tar -xzvf data.tar.gz 
@@ -8,3 +10,6 @@ rm -rf opt/
 mkdir -p export/share/icons/hicolor/256x256/apps
 cp usr/share/icons/hicolor/256x256/apps/unity-editor-icon.png export/share/icons/hicolor/256x256/apps/com.unity.Personal.png
 
+# WIP: fake sandbox
+gcc -fPIC -shared -o /app/extra/Unity/Editor/libunity-nosuid.so /app/misc/unity-nosuid.c -ldl
+strip /app/extra/Unity/Editor/libunity-nosuid.so

@@ -84,6 +84,10 @@
                 },
                 {
                     "type": "file",
+                    "path": "unity-nosuid.c"
+                },
+                {
+                    "type": "file",
                     "path": "unity-Makefile",
                     "dest-filename": "Makefile"
                 }
