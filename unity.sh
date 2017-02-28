@@ -4,5 +4,5 @@
 export CHROME_DEVEL_SANDBOX=
 
 # we need this to fake permissions
-LD_PRELOAD=/app/extra/Unity/Editor/libunity-nosuid.so /app/extra/Unity/Editor/Unity
+LD_PRELOAD="/app/extra/Unity/Editor/libunity-nosuid.so /lib/libresolv.so.2" /app/extra/Unity/Editor/Unity
 
