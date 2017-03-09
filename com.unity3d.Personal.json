@@ -6,9 +6,18 @@
     "command": "unity",
      "finish-args": [
         "--share=ipc", 
+	"--device=dri",
+	"--device=kvm",
+	"--talk-name=org.freedesktop.Flatpak",
 	"--device=all",
         "--socket=x11",
-        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.PolicyKit1",
+	"--filesystem=/tmp",
+	"--allow=devel",
+	"--talk-name=org.freedesktop.Flatpak",
+	"--socket=wayland",
+	"--socket=system-bus",
+	"--socket=session-bus",
         "--filesystem=host",
         "--share=network",
 	"--socket=pulseaudio",
@@ -57,18 +66,18 @@
           ]
         },
         {
-          "name": "libselinux",
+          "name": "libpng",
           "no-autogen": true,
           "sources": [
             {
               "type": "file",
-              "url": "http://ftp.cz.debian.org/debian/pool/main/libs/libselinux/libselinux1_2.3-2_amd64.deb",
-              "sha256": "37bf5f0d0d50579bdff97098ff330cb44dd0148e20db91aa3848dd19c698e528",
-              "dest-filename": "libselinux.deb"
+              "url": "http://ftp.ch.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb",
+              "sha256": "fa86f58f9595392dc078abe3b446327089c47b5ed8632c19128a156a1ea68b96",
+              "dest-filename": "libpng.deb"
             },
             {
               "type": "file",
-              "path": "deb-Makefile",
+              "path": "png-Makefile",
               "dest-filename": "Makefile"
             }
           ]
