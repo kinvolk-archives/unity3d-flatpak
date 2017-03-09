@@ -6,14 +6,26 @@
     "command": "unity",
      "finish-args": [
         "--share=ipc", 
+	"--device=all",
         "--socket=x11",
         "--socket=wayland",
         "--filesystem=host",
         "--share=network",
-	"--share=pulseaudio",
+	"--socket=pulseaudio",
         "--extra-data=unity-editor-5.1.0f3+2015082501_amd64.deb:5cbf4f596896aad66562d4bafeb5067c36a8d2b8b455a60c815a7a80e7942962:997410774::http://download.unity3d.com/download_unity/unity-editor-5.1.0f3+2015082501_amd64.deb"
      ],
     "modules": [
+        {
+            "name": "nodejs",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://nodejs.org/dist/v5.12.0/node-v5.12.0.tar.xz",
+                    "path": "node-v5.12.0.tar.xz",
+                    "sha256": "4f926373f11f2a25156eee1804ec012eb912c42e5d34fc2909889da22efdadfe"
+                }
+            ]
+        },
         {
           "name": "libglu",
           "sources": [
@@ -43,23 +55,6 @@
               "url": "http://de.archive.ubuntu.com/ubuntu/pool/main/a/alsa-lib/libasound2_1.0.27.2-3ubuntu7_amd64.deb", 
               "sha256": "04dbcbb653c059a0a605f8eac645f2a679ad8e63bd0b1fd290af404bf61503ff",
               "dest-filename": "libasound2.deb"
-            },
-            {
-              "type": "file",
-              "path": "deb-Makefile",
-              "dest-filename": "Makefile"
-            }
-          ]
-        },
-        {
-          "name": "libc6",
-          "no-autogen": true,
-          "sources": [
-            {
-              "type": "file",
-              "url": "http://obs-master.endlessm-sf.com:82/shared/eos/pool/core/g/glibc/libc6-i386_2.19-18+deb8u4endless4bem1_amd64.deb",
-              "sha256": "3a6af8b16fba82b84fb6feb7d7abda854a94828c8653d80177763eb146ee2fc1",
-              "dest-filename": "libc6.deb"
             },
             {
               "type": "file",
