@@ -5,6 +5,7 @@ ar x unity-editor-5.1.0f3+2015082501_amd64.deb
 rm -rf unity-editor-5.1.0f3+2015082501_amd64.deb
 tar -xzvf data.tar.gz 
 rm -rf debian-binary data.tar.gz control.tar.gz
+rm -rf opt/Unity/Editor/Data/Tools/libgpg-error.so.0
 mv opt/* .
 rm -rf opt/
 mkdir -p export/share/icons/hicolor/256x256/apps
