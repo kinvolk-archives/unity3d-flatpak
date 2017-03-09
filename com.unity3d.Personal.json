@@ -57,6 +57,23 @@
           ]
         },
         {
+          "name": "libselinux",
+          "no-autogen": true,
+          "sources": [
+            {
+              "type": "file",
+              "url": "http://ftp.cz.debian.org/debian/pool/main/libs/libselinux/libselinux1_2.3-2_amd64.deb",
+              "sha256": "37bf5f0d0d50579bdff97098ff330cb44dd0148e20db91aa3848dd19c698e528",
+              "dest-filename": "libselinux.deb"
+            },
+            {
+              "type": "file",
+              "path": "deb-Makefile",
+              "dest-filename": "Makefile"
+            }
+          ]
+        },
+        {
           "name": "libasound2",
           "no-autogen": true,
           "sources": [
